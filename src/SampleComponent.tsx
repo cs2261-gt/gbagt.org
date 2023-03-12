@@ -1,13 +1,13 @@
 import { Box, Divider } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import EmulatorFrame from "./EmulatorFrame";
+
 
 export default function SampleComponent() {
 
     return (
         <>
             <Box sx={{
-                width: '100vw',
-                height: '100vh',
                 py: 5,
                 textAlign: 'center'
             }}>
@@ -20,6 +20,7 @@ export default function SampleComponent() {
                 <Typography variant="h3" pb={10} >
                     Think of creative name on the spot.
                 </Typography>
+                <EmulatorFrame />
             </Box>
         </>
     )
