@@ -142,7 +142,7 @@ export const themeSettings = (mode: string) : ThemeOptions | undefined => {
                         light: colors.grey[100]
                     },
                     background: {
-                        default: colors.primary[500]
+                        default: colors.grey[900]
                     }
                 } : {
                     primary: {
