@@ -1,16 +1,25 @@
 import CSS from 'csstype';
 
-export default function EmulatorFrame() {
+interface EmulatorProps {
+    game: string;
+    width?: string;
+    height?: string;
+
+}
+
+export default function EmulatorFrame({ game = "", width = "480px", height = "320px"} : EmulatorProps) {
 
     const iframeStyles: CSS.Properties = {
-        width: "480px",
-        height: "320px",
+        width: width,
+        height: height,
         margin: "0 auto",
         display: "block"
     };
 
+    const src: string = "/player.html" + game;
+
     return (
-        <iframe src="/player.html" style={ iframeStyles }></iframe>
+        <iframe src={ src } style={ iframeStyles }></iframe>
     )
 }
 

@@ -20,7 +20,7 @@ export default function SampleComponent() {
                 <Typography variant="h3" pb={10} >
                     Think of creative name on the spot.
                 </Typography>
-                <EmulatorFrame />
+                <EmulatorFrame game="" />
             </Box>
         </>
     )
