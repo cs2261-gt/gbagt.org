@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+import { useState } from 'react';
+import { Box, IconButton } from '@mui/material';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import CSS from 'csstype';
 
@@ -7,9 +8,10 @@ interface EmulatorProps {
     img?: string;
     width?: string;
     height?: string;
+    initialState?: boolean;
 }
 
-export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "480px", height = "320px" } : EmulatorProps) {
+export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "480px", height = "320px", initialState = false } : EmulatorProps) {
 
     const gameStyles: CSS.Properties = {
         width: width,
@@ -27,10 +29,11 @@ export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "
         zIndex: -2
     };
 
-    const active: boolean = true;
-
     const gamePath: string = "/player.html" + game;    
     const imagePath: string = img;
+
+    const [active, setActive] = useState(initialState);
+    const handleClick = () => { setActive(true); };
 
     return (
         <Box sx={{ 
@@ -45,7 +48,9 @@ export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "
                 ? <iframe title="GBA Emulator" src={ gamePath } style={ gameStyles } />
                 : <>
                     <img alt="" src={ imagePath } style={ imageStyles } />
-                    <PlayArrowRoundedIcon sx={{ width: "50%", height: "50%", m: "auto" }} />
+                    <IconButton onClick={ handleClick }>
+                        <PlayArrowRoundedIcon sx={{ width: "50%", height: "50%", m: "auto" }} />
+                    </IconButton>
                 </>
             }
         </Box>
