@@ -23,6 +23,24 @@ export default function SampleComponent() {
                 <Box sx={{ width: "480px", height: "320px", m: "auto"}}>
                     <EmulatorFrame game="" />
                 </Box>
+                <Typography variant="h1" color="secondary.main" >
+                    Purple text! :D
+                </Typography>
+                <Typography variant="h2" color="tertiary.main" >
+                    Green text... :/
+                </Typography>
+                <Typography variant="h3" color="secondary.main" >
+                    Purple text! :D
+                </Typography>
+                <Typography variant="h4" color="tertiary.main" >
+                    Green text... :/
+                </Typography>
+                <Typography variant="h5" color="secondary.main" >
+                    Purple text! :D
+                </Typography>
+                <Typography variant="h6" color="primary.main" >
+                    Grey text? :O
+                </Typography>
             </Box>
         </>
     )
