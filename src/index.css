@@ -96,3 +96,27 @@ body,
 ::-webkit-scrollbar-track:hover {
   background: #555;
 }
+
+/* unvisited link */
+a:link {
+  text-decoration: "none";
+  box-shadow: "none";
+}
+
+/* visited link */
+a:visited {
+  text-decoration: "none";
+  box-shadow: "none";
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: "none";
+  box-shadow: "none";
+}
+
+/* selected link */
+a:active {
+  text-decoration: "none";
+  box-shadow: "none";
+}

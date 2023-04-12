@@ -126,14 +126,14 @@ export const themeSettings = (mode: string) : ThemeOptions | undefined => {
         },
         typography: {
             fontFamily: ["GT America", "sans-serif"].join(","),
-            fontSize: 12,
+            fontSize: 16,
             h1: {
-                fontFamily: ["FT88 Gothique", "sans-serif"].join(","),
+                fontFamily: ["FT88", "sans-serif"].join(","),
                 color: colors.grey[100],
-                fontSize: 40
+                fontSize: 72
             },
             h2: {
-                fontFamily: ["FT88 Expanded", "sans-serif"].join(","),
+                fontFamily: ["FT88", "sans-serif"].join(","),
                 fontSize: 32
             },
             h3: {
@@ -142,16 +142,16 @@ export const themeSettings = (mode: string) : ThemeOptions | undefined => {
             },
             h4: {
                 fontFamily: ["FT88", "sans-serif"].join(","),
-                fontSize: 20
+                fontSize: 24
             },
             h5: {
                 fontFamily: ["FT88", "sans-serif"].join(","),
-                fontSize: 16
+                fontSize: 20
             },
             h6: {
                 fontFamily: ["GT America", "sans-serif"].join(","),
                 fontStyle: 'italic',
-                fontSize: 14
+                fontSize: 16
             }
         }
     };

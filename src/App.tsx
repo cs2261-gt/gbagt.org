@@ -1,6 +1,16 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import SampleComponent from "./SampleComponent"
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
+import Navbar from "./components/global/Navbar"
+import About from "./pages/About"
+import Resources from "./pages/Resources"
+import Documentation from "./pages/Documentation"
+import HallOfFame from "./pages/HallOfFame"
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
 
@@ -12,7 +22,16 @@ export default function App() {
         <CssBaseline>
           <div className="app">
             <main className="content">
-              <SampleComponent />
+              <BrowserRouter>
+                <Navbar />
+                <Routes>
+                  <Route path="/" element={ <About /> }></Route>
+                  <Route path="/resources" element={ <Resources /> }></Route>
+                  <Route path="/docs" element={ <Documentation /> }></Route>
+                  <Route path="/hall-of-fame" element={ <HallOfFame /> }></Route>
+                  <Route path='*' element={ <ErrorPage /> }/>
+                </Routes>
+              </BrowserRouter>
             </main>
           </div>
         </CssBaseline>
