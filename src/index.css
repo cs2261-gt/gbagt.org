@@ -1,5 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
+@font-face {
+  font-family: 'FT88', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/FT88-Regular.otf);
+}
+
+@font-face {
+  font-family: 'FT88', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  src: url(./fonts/FT88-Bold.otf);
+}
+
+@font-face {
+  font-family: 'FT88', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  src: url(./fonts/FT88-Italic.otf);
+}
+
+@font-face {
+  font-family: 'FT88 Serif', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/FT88-Serif.otf);
+}
+
+@font-face {
+  font-family: 'FT88 Expanded', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/FT88-Expanded.otf);
+}
+
+@font-face {
+  font-family: 'FT88 School', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/FT88-School.otf);
+}
+
+@font-face {
+  font-family: 'FT88 Gothique', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/FT88-Gothique.otf);
+}
+
+@font-face {
+  font-family: 'GT America', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/GT\ America\ Regular.otf);
+}
+
+@font-face {
+  font-family: 'GT America', sans-serif;
+  font-weight: normal;
+  font-style: bold;
+  src: url(./fonts/GT\ America\ Bold.otf);
+}
+
 html,
 body,
 #root,
@@ -7,7 +70,7 @@ body,
 .content {
   height: 100%;
   width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'GT America', sans-serif;
 }
 
 .app {
