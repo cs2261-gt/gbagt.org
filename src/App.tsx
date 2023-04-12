@@ -25,10 +25,10 @@ export default function App() {
               <BrowserRouter>
                 <Navbar />
                 <Routes>
-                  <Route path="/" element={ <About /> }></Route>
-                  <Route path="/resources" element={ <Resources /> }></Route>
-                  <Route path="/docs" element={ <Documentation /> }></Route>
-                  <Route path="/hall-of-fame" element={ <HallOfFame /> }></Route>
+                  <Route path="/" element={ <About /> } />
+                  <Route path="/resources" element={ <Resources /> } />
+                  <Route path="/docs" element={ <Documentation /> } />
+                  <Route path="/hall-of-fame" element={ <HallOfFame /> } />
                   <Route path='*' element={ <ErrorPage /> }/>
                 </Routes>
               </BrowserRouter>
