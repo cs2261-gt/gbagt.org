@@ -1,3 +1,4 @@
+import { useState, useLayoutEffect, useRef} from 'react';
 import { Box, Typography } from '@mui/material';
 import { useLocation, Location, Link } from 'react-router-dom';
 
@@ -11,64 +12,75 @@ export default function Navbar() {
     const unselectedText: string = "background.default";
     const selectedText: string = "neutral.light";
 
+    const [height, setHeight] = useState(0);
+    const ref = useRef(document.createElement("div"));
+
+    useLayoutEffect(() => {
+        setHeight(ref.current.clientHeight);
+    })
+
     return (
-        <Box sx={{
-            width: "100%", 
-            px: 1,
-            py: 1,
-            backgroundColor: "background.default"
-        }}>
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                backgroundColor: unselectedBg
+        <>
+            <Box ref={ ref } sx={{
+                width: "100%",
+                px: 1,
+                py: 1,
+                position: "fixed",
+                backgroundColor: "background.default"
             }}>
                 <Box sx={{
-                    px: 3,
-                    py: 2,
-                    backgroundColor: location.pathname === '/' ? selectedBg : unselectedBg
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    backgroundColor: unselectedBg
                 }}>
-                    <Link to="/" style={{ textDecoration: 'none' }}>
-                        <Typography variant="h2" color={ location.pathname === '/' ? selectedText : unselectedText }>
-                            About
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box sx={{
-                    px: 3,
-                    py: 2,
-                    backgroundColor: location.pathname === '/resources' ? selectedBg : unselectedBg
-                }}>
-                    <Link to="/resources" style={{ textDecoration: 'none' }}>
-                        <Typography variant="h2" color={ location.pathname === '/resources' ? selectedText : unselectedText }>
-                            Resources
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box sx={{
-                    px: 3,
-                    py: 2,
-                    backgroundColor: location.pathname === '/docs' ? selectedBg : unselectedBg
-                }}>
-                    <Link to="/docs" style={{ textDecoration: 'none' }}>
-                        <Typography variant="h2" color={ location.pathname === '/docs' ? selectedText : unselectedText }>
-                            Documentation
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box sx={{
-                    px: 3,
-                    py: 2,
-                    backgroundColor: location.pathname === '/hall-of-fame' ? selectedBg : unselectedBg
-                }}>
-                    <Link to="/hall-of-fame" style={{ textDecoration: 'none' }}>
-                        <Typography variant="h2" color={ location.pathname === '/hall-of-fame' ? selectedText : unselectedText }>
-                            Hall of Fame
-                        </Typography>
-                    </Link>
+                    <Box sx={{
+                        px: 3,
+                        py: 2,
+                        backgroundColor: location.pathname === '/' ? selectedBg : unselectedBg
+                    }}>
+                        <Link to="/" style={{ textDecoration: 'none' }}>
+                            <Typography variant="h2" color={ location.pathname === '/' ? selectedText : unselectedText }>
+                                About
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box sx={{
+                        px: 3,
+                        py: 2,
+                        backgroundColor: location.pathname === '/resources' ? selectedBg : unselectedBg
+                    }}>
+                        <Link to="/resources" style={{ textDecoration: 'none' }}>
+                            <Typography variant="h2" color={ location.pathname === '/resources' ? selectedText : unselectedText }>
+                                Resources
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box sx={{
+                        px: 3,
+                        py: 2,
+                        backgroundColor: location.pathname === '/docs' ? selectedBg : unselectedBg
+                    }}>
+                        <Link to="/docs" style={{ textDecoration: 'none' }}>
+                            <Typography variant="h2" color={ location.pathname === '/docs' ? selectedText : unselectedText }>
+                                Documentation
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box sx={{
+                        px: 3,
+                        py: 2,
+                        backgroundColor: location.pathname === '/hall-of-fame' ? selectedBg : unselectedBg
+                    }}>
+                        <Link to="/hall-of-fame" style={{ textDecoration: 'none' }}>
+                            <Typography variant="h2" color={ location.pathname === '/hall-of-fame' ? selectedText : unselectedText }>
+                                Hall of Fame
+                            </Typography>
+                        </Link>
+                    </Box>
                 </Box>
             </Box>
-        </Box>
+            <Box sx={{ height: height, backgroundColor: "primary.main" }}/>
+        </>
     )
 
 }
