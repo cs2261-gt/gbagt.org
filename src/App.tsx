@@ -1,39 +1,16 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Route
+  BrowserRouter,
+  Route,
+  Routes
 } from 'react-router-dom';
-import SampleComponent from "./components/global/SampleComponent"
 import Navbar from "./components/global/Navbar"
 import About from "./pages/About"
 import Resources from "./pages/Resources"
 import Documentation from "./pages/Documentation"
 import HallOfFame from "./pages/HallOfFame"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <SampleComponent />
-  },
-  {
-    path: "about",
-    element: <About />
-  },
-  {
-    path: "resources",
-    element: <Resources />
-  },
-  {
-    path: "documentation",
-    element: <Documentation />
-  },
-  {
-    path: "hall-of-fame",
-    element: <HallOfFame />
-  },
-]);
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
 
@@ -45,8 +22,16 @@ export default function App() {
         <CssBaseline>
           <div className="app">
             <main className="content">
-              <Navbar />
-              <RouterProvider router={ router } />
+              <BrowserRouter>
+                <Navbar />
+                <Routes>
+                  <Route path="/" element={ <About /> }></Route>
+                  <Route path="/resources" element={ <Resources /> }></Route>
+                  <Route path="/docs" element={ <Documentation /> }></Route>
+                  <Route path="/hall-of-fame" element={ <HallOfFame /> }></Route>
+                  <Route path='*' element={ <ErrorPage /> }/>
+                </Routes>
+              </BrowserRouter>
             </main>
           </div>
         </CssBaseline>

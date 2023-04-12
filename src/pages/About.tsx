@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import SampleComponent from "../components/global/SampleComponent";
 
 export default function About() {
 
@@ -11,9 +12,10 @@ export default function About() {
                 <Typography variant="h1">
                     ABOUT
                 </Typography>
+                <SampleComponent />
             </Box>
         </>
     )
   
-  }
+}
   

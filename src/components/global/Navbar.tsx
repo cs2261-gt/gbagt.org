@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
+import { useLocation, Location, Link } from 'react-router-dom';
 
 export default function Navbar() {
 
-    const [selection, setSelection] = useState(1);
+    const location: Location = useLocation();
 
     const unselectedBg: string = "neutral.light";
     const selectedBg: string = "background.default";
@@ -26,38 +26,46 @@ export default function Navbar() {
                 <Box sx={{
                     px: 3,
                     py: 2,
-                    backgroundColor: selection === 1 ? selectedBg : unselectedBg
-                }} onClick={ () => setSelection(1) }>
-                    <Typography variant="h2" color={ selection === 1 ? selectedText : unselectedText }>
-                        About
-                    </Typography>
+                    backgroundColor: location.pathname === '/' ? selectedBg : unselectedBg
+                }}>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <Typography variant="h2" color={ location.pathname === '/' ? selectedText : unselectedText }>
+                            About
+                        </Typography>
+                    </Link>
                 </Box>
                 <Box sx={{
                     px: 3,
                     py: 2,
-                    backgroundColor: selection === 2 ? selectedBg : unselectedBg
-                }} onClick={ () => setSelection(2) }>
-                    <Typography variant="h2" color={ selection === 2 ? selectedText : unselectedText }>
-                        Resources
-                    </Typography>
+                    backgroundColor: location.pathname === '/resources' ? selectedBg : unselectedBg
+                }}>
+                    <Link to="/resources" style={{ textDecoration: 'none' }}>
+                        <Typography variant="h2" color={ location.pathname === '/resources' ? selectedText : unselectedText }>
+                            Resources
+                        </Typography>
+                    </Link>
                 </Box>
                 <Box sx={{
                     px: 3,
                     py: 2,
-                    backgroundColor: selection === 3 ? selectedBg : unselectedBg
-                }} onClick={ () => setSelection(3) }>
-                    <Typography variant="h2" color={ selection === 3 ? selectedText : unselectedText }>
-                        Documentation
-                    </Typography>
+                    backgroundColor: location.pathname === '/docs' ? selectedBg : unselectedBg
+                }}>
+                    <Link to="/docs" style={{ textDecoration: 'none' }}>
+                        <Typography variant="h2" color={ location.pathname === '/docs' ? selectedText : unselectedText }>
+                            Documentation
+                        </Typography>
+                    </Link>
                 </Box>
                 <Box sx={{
                     px: 3,
                     py: 2,
-                    backgroundColor: selection === 4 ? selectedBg : unselectedBg
-                }} onClick={ () => setSelection(4) }>
-                    <Typography variant="h2" color={ selection === 4 ? selectedText : unselectedText }>
-                        Hall of Fame
-                    </Typography>
+                    backgroundColor: location.pathname === '/hall-of-fame' ? selectedBg : unselectedBg
+                }}>
+                    <Link to="/hall-of-fame" style={{ textDecoration: 'none' }}>
+                        <Typography variant="h2" color={ location.pathname === '/hall-of-fame' ? selectedText : unselectedText }>
+                            Hall of Fame
+                        </Typography>
+                    </Link>
                 </Box>
             </Box>
         </Box>
