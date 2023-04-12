@@ -1,7 +1,39 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route
+} from 'react-router-dom';
 import SampleComponent from "./components/global/SampleComponent"
 import Navbar from "./components/global/Navbar"
+import About from "./pages/About"
+import Resources from "./pages/Resources"
+import Documentation from "./pages/Documentation"
+import HallOfFame from "./pages/HallOfFame"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <SampleComponent />
+  },
+  {
+    path: "about",
+    element: <About />
+  },
+  {
+    path: "resources",
+    element: <Resources />
+  },
+  {
+    path: "documentation",
+    element: <Documentation />
+  },
+  {
+    path: "hall-of-fame",
+    element: <HallOfFame />
+  },
+]);
 
 export default function App() {
 
@@ -14,7 +46,7 @@ export default function App() {
           <div className="app">
             <main className="content">
               <Navbar />
-              <SampleComponent />
+              <RouterProvider router={ router } />
             </main>
           </div>
         </CssBaseline>
