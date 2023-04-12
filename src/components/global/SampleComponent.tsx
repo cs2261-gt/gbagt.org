@@ -24,24 +24,25 @@ export default function SampleComponent() {
                     <EmulatorFrame game="" />
                 </Box>
                 <Typography variant="h1" color="secondary.main" >
-                    Think
+                    Big Title
                 </Typography>
                 <Typography variant="h2" color="tertiary.main" >
-                    of a
+                    Header Subtitle
                 </Typography>
                 <Typography variant="h3" color="secondary.main" >
-                    creative
+                    Regular Text
                 </Typography>
                 <Typography variant="h4" color="tertiary.main" >
-                    name
+                    * Bullets
                 </Typography>
                 <Typography variant="h5" color="secondary.main" >
-                    on the spot
+                    Small
                 </Typography>
                 <Typography variant="h6" color="primary.main" >
-                    More coming soon :D
+                    smol
                 </Typography>
             </Box>
         </>
     )
+
 }

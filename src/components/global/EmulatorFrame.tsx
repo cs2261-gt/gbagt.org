@@ -55,4 +55,5 @@ export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "
             }
         </Box>
     )
+    
 }

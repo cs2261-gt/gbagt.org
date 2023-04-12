@@ -1,6 +1,7 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import SampleComponent from "./SampleComponent"
+import SampleComponent from "./components/global/SampleComponent"
+import Navbar from "./components/global/Navbar"
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
         <CssBaseline>
           <div className="app">
             <main className="content">
+              <Navbar />
               <SampleComponent />
             </main>
           </div>
