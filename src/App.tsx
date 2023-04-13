@@ -23,7 +23,7 @@ export default function App() {
           <div className="app">
             <main className="content">
               <BrowserRouter>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Routes>
                   <Route path="/" element={ <About /> } />
                   <Route path="/resources" element={ <Resources /> } />
