@@ -11,7 +11,7 @@ interface EmulatorProps {
     initialState?: boolean;
 }
 
-export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "480px", height = "320px", initialState = false } : EmulatorProps) {
+export default function EmulatorFrame({ game, img = process.env.PUBLIC_URL + "/logo-gbagt.png", width = "480px", height = "320px", initialState = false } : EmulatorProps) {
 
     const gameStyles: CSS.Properties = {
         width: width,
@@ -29,7 +29,7 @@ export default function EmulatorFrame({ game, img = "/logo-gbagt.png", width = "
         zIndex: -2
     };
 
-    const gamePath: string = "/player.html" + game;    
+    const gamePath: string = process.env.PUBLIC_URL + "/player.html" + game;    
     const imagePath: string = img;
 
     const [active, setActive] = useState(initialState);

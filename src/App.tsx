@@ -2,6 +2,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import {
   BrowserRouter,
+  HashRouter,
   Route,
   Routes
 } from 'react-router-dom';
@@ -22,16 +23,16 @@ export default function App() {
         <CssBaseline>
           <div className="app">
             <main className="content">
-              <BrowserRouter>
-                {/* <Navbar /> */}
+              <HashRouter>
+                <Navbar />
                 <Routes>
                   <Route path="/" element={ <About /> } />
                   <Route path="/resources" element={ <Resources /> } />
                   <Route path="/docs" element={ <Documentation /> } />
                   <Route path="/hall-of-fame" element={ <HallOfFame /> } />
-                  <Route path='*' element={ <ErrorPage /> }/>
+                  <Route path="*" element={ <ErrorPage /> } />
                 </Routes>
-              </BrowserRouter>
+              </HashRouter>
             </main>
           </div>
         </CssBaseline>
