@@ -6,7 +6,6 @@ export default function ErrorPage() {
     return (
         <>
             <Typography>404 Page not found</Typography>
-            <SampleComponent />
         </>
     )
   
