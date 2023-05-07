@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/gbagt.org/static/css/main.a1594b41.css",
-    "main.js": "/gbagt.org/static/js/main.4e6537a5.js",
-    "static/media/GT America Bold.otf": "/gbagt.org/static/media/GT America Bold.ebc81e22350db0c757c1.otf",
-    "static/media/GT America Regular.otf": "/gbagt.org/static/media/GT America Regular.0c9cd263bb5cf0b79374.otf",
-    "static/media/FT88-School.otf": "/gbagt.org/static/media/FT88-School.ab1eb81173a9fd549b7b.otf",
-    "static/media/FT88-Italic.otf": "/gbagt.org/static/media/FT88-Italic.fca1910ede1cc8819ed8.otf",
-    "static/media/FT88-Gothique.otf": "/gbagt.org/static/media/FT88-Gothique.7221eacbc8064dc49efc.otf",
-    "static/media/FT88-Bold.otf": "/gbagt.org/static/media/FT88-Bold.34a5f47e35ed873dcd84.otf",
-    "static/media/FT88-Serif.otf": "/gbagt.org/static/media/FT88-Serif.34408dab01d99a089f29.otf",
-    "static/media/FT88-Expanded.otf": "/gbagt.org/static/media/FT88-Expanded.c1d5b5c19e4ee1dc018c.otf",
-    "static/media/FT88-Regular.otf": "/gbagt.org/static/media/FT88-Regular.e5231ba9fea157b6fb9f.otf",
-    "index.html": "/gbagt.org/index.html",
-    "main.a1594b41.css.map": "/gbagt.org/static/css/main.a1594b41.css.map",
-    "main.4e6537a5.js.map": "/gbagt.org/static/js/main.4e6537a5.js.map"
+    "main.css": "/gbagt-website/static/css/main.1bb47d6c.css",
+    "main.js": "/gbagt-website/static/js/main.1926a97c.js",
+    "static/media/GT America Bold.otf": "/gbagt-website/static/media/GT America Bold.ebc81e22350db0c757c1.otf",
+    "static/media/GT America Regular.otf": "/gbagt-website/static/media/GT America Regular.0c9cd263bb5cf0b79374.otf",
+    "static/media/FT88-School.otf": "/gbagt-website/static/media/FT88-School.ab1eb81173a9fd549b7b.otf",
+    "static/media/FT88-Italic.otf": "/gbagt-website/static/media/FT88-Italic.fca1910ede1cc8819ed8.otf",
+    "static/media/FT88-Gothique.otf": "/gbagt-website/static/media/FT88-Gothique.7221eacbc8064dc49efc.otf",
+    "static/media/FT88-Bold.otf": "/gbagt-website/static/media/FT88-Bold.34a5f47e35ed873dcd84.otf",
+    "static/media/FT88-Serif.otf": "/gbagt-website/static/media/FT88-Serif.34408dab01d99a089f29.otf",
+    "static/media/FT88-Expanded.otf": "/gbagt-website/static/media/FT88-Expanded.c1d5b5c19e4ee1dc018c.otf",
+    "static/media/FT88-Regular.otf": "/gbagt-website/static/media/FT88-Regular.e5231ba9fea157b6fb9f.otf",
+    "index.html": "/gbagt-website/index.html",
+    "main.1bb47d6c.css.map": "/gbagt-website/static/css/main.1bb47d6c.css.map",
+    "main.1926a97c.js.map": "/gbagt-website/static/js/main.1926a97c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1594b41.css",
-    "static/js/main.4e6537a5.js"
+    "static/css/main.1bb47d6c.css",
+    "static/js/main.1926a97c.js"
   ]
 }
