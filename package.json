@@ -1,7 +1,7 @@
 {
   "name": "react-testing",
   "version": "5.0.0",
-  "homepage": "https://cs2261-gt.github.io/gbagt.org/#/",
+  "homepage": "https://cs2261-gt.github.io/gbagt-website/#/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
