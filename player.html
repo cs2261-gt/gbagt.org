@@ -10,8 +10,9 @@
     <title>GBA @ GT</title>
   </head>
 
-  <body>    
-    <div id="container">
+  <body>
+    <img class="preview" src="img/roms/Purzzle.png" />
+    <div id="container" class="hidden">
       <div id="menu" class="paused">
         <ul class="menu" id="menu_top">
           <li style="display:none;">File
@@ -30,7 +31,7 @@
               <li><input type="checkbox" id="toggleDynamicSpeed"> Dynamic Speed</li>
               <li><input type="checkbox" id="offthread-cpu" checked="checked"> CPU off-thread</li>
               <li><input type="checkbox" id="offthread-gpu" checked="checked"> GPU off-thread</li>
-              <li style="display:none;"><input type="checkbox" id="sound"> Sound</li>
+              <li><input type="checkbox" id="sound"> Sound</li>
               <li>GBA Bindings
                 <ul>
                   <li id="key_a"><span>A</span></li>

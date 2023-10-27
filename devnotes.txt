@@ -1,0 +1,6 @@
+To run/test locally with minimal fuss (python3 installed):
+python -m http.server 8000
+
+For other options: https://gist.github.com/willurd/5720255
+
+You can look into how to run gh-pages locally if you _really_ want to do the full Jekyl run.

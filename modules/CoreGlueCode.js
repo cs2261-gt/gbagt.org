@@ -76,13 +76,19 @@ function registerBIOS() {
     downloadROM();
 }
 
+function letErRip(){
+    document.querySelector("#container").removeAttribute("class");
+    document.getElementById("play").click();
+    document.querySelector("img.preview").remove();
+}
+
 function downloadROM() {
-    downloadFile("roms/lab0.gba", registerROM);
+    downloadFile("roms/Purzzle.gba", registerROM);
 }
 
 function registerROM() {
     processDownload(this, attachROM);
-    document.getElementById("play").click();
+    addEvent("click", document.querySelector("img.preview"), letErRip);
 }
 
 function registerIodineHandler() {
