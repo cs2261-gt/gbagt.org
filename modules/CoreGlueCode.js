@@ -13,7 +13,7 @@ var IodineGUI = {
     currentSpeed: [false, 0],
     defaults: {
         timerRate: 8,
-        sound: false,
+        sound: true,
         volume: 1,
         skipBoot: true,
         toggleSmoothScaling: true,

@@ -1,269 +1,128 @@
-/*
-
-GBA ONLINE;  GBA.JS.ORG;  "Online GameBoy Advance Emulator"
-Copyright (C) 2021-present AYVACS
-Licensed under the MIT License (view LICENSE.md for more information)
-
-*/
-
-
-/*
-|-----------------------------------------
-| Core CSS
-|-----------------------------------------
- */
+@font-face {
+    font-family: 'FT88';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/FT88-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88', sans-serif;
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+    src: url("/fonts/FT88-Bold.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88';
+    font-display: swap;
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fonts/FT88-Italic.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88 Serif';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/FT88-Serif.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88 Expanded';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/FT88-Expanded.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88 School';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/FT88-School.otf");
+  }
+  
+  @font-face {
+    font-family: 'FT88 Gothique';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/FT88-Gothique.otf");
+  }
+  
+  @font-face {
+    font-family: 'GT America';
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/GT\ America\ Regular.otf");
+  }
+  
+  @font-face {
+    font-family: 'GT America';
+    font-display: swap;
+    font-weight: normal;
+    font-style: bold;
+    src: url("/fonts/GT\ America\ Bold.otf");
+  }
 
 html,
-body {
-    font-family: Open Sans, Arial, sans-serif;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #000;
-    color: #fff;
-    overflow: hidden;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+body,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: 'GT America', sans-serif;
+  background-color: #222;
+  color: #eee;
 }
 
-
-/* reset all list items */
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-#container {
-    width: 100%;
-    height: 100%;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
 }
 
-#main {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
-
-/*
-|-----------------------------------------
-| Canvas
-|-----------------------------------------
-|
-| Classes are automatically overwritten
-| by the filter styles, therefore only
-| attributes and id"s can be used.
-|
- */
-
-canvas {
-    margin: auto;
-    display: block;
-    padding: 0px;
-    background-color: rgb(248, 248, 248);
-    cursor: none;
+/* Handle on Hover */
+::-webkit-scrollbar-track:hover {
+  background: #555;
 }
 
-canvas.textureSmooth {
-    image-rendering: auto;
-    image-rendering: optimizeQuality;
-    -ms-interpolation-mode: bicubic;
+/* unvisited link */
+a:link {
+  text-decoration: "none";
+  box-shadow: "none";
 }
 
-canvas.texturePixelated {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    -ms-interpolation-mode: nearest-neighbor;
+/* visited link */
+a:visited {
+  text-decoration: "none";
+  box-shadow: "none";
 }
 
-
-/*
-|-----------------------------------------
-| Messages
-|-----------------------------------------
- */
-
-.message {
-    background: #6cc27d;
-    padding: 1em 2em;
-    text-align: center;
-    color: #fff;
-    bottom: 0px;
-    position: fixed;
-    left: 0px;
-    display: none;
-    font-weight: bold;
-    vertical-align: bottom;
-    font-family: monospace;
-    z-index: 1;
+/* mouse over link */
+a:hover {
+  text-decoration: "none";
+  box-shadow: "none";
 }
 
-
-/*
-|-----------------------------------------
-| Main Menu
-|-----------------------------------------
- */
-
-
-/* top level menu */
-
-div#menu {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 0px;
+/* selected link */
+a:active {
+  text-decoration: "none";
+  box-shadow: "none";
 }
 
-.menu {
-    position: fixed;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    transition: .3s ease;
-    cursor: pointer;
-}
-
-
-.playing .menu {
-    opacity: 0;
-}
-
-.playing .menu:hover {
-    opacity: 0.9;
-}
-
-
-/* sub level menu */
-
-.menu ul {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
-    transition: .3s ease;
-    z-index: 1;
-}
-
-li.hide {
-    display: none !important;
-}
-
-
-/* bottom level nav */
-
-.menu ul ul {
-    top: 0;
-    left: 100%;
-}
-
-#menu_top li {
-    padding: .7em 1em;
-}
-
-.menu ul li {
-    padding: .3em 1em !important;
-}
-
-.menu li {
-    white-space: nowrap;
-    position: relative;
-    cursor: pointer;
-}
-
-.menu li:hover {
-    /*background: rgba(0,0,0,.1);*/
-}
-
-
-/* show sub nav on hover */
-
-.menu li:hover>ul {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/*
-|-----------------------------------------
-| Touch Controls
-|-----------------------------------------
- */
-
-.touch-controls {
-    display: flex;
-    padding: 1em;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-
-.touch-controls button {
-    display: inline-block;
-    -webkit-appearance: none;
-    border: 0;
-    outline: 0;
-    background: #fff;
-    opacity: 0.7;
-    width: 3em;
-    height: 3em;
-    line-height: 3em;
-    text-align: center;
-    cursor: pointer;
-    transition: .1s ease;
-    margin: .5em;
-}
-
-.touch-controls button:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4) inset;
-}
-
-.touch-dpad,
-.touch-buttons {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.touch-buttons {
-    align-self: flex-end;
-}
-
-.touch-dpad--up {
-    flex-grow: 1;
-    width: 100%;
-}
-
-
-/* Only show controls on portrait mode screens */
-
-@media screen and (min-aspect-ratio: 1/1) {
-    .touch-controls {
-        display: none;
-    }
-    #main {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-        align-items: center;
-    }
+h1, h2, h3 {
+  font-family: "FT88";
 }
