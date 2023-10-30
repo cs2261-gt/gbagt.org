@@ -1,0 +1,32 @@
+[
+  {
+    "author": "Marie Zimmerman",
+    "authorSite": "https://github.com/mariezimmy",
+    "projectName": "Purzzle",
+    "rom": "Purzzle.gba",
+    "genres": ["puzzle"],
+    "year": 2019,
+    "semester": "Spring",
+    "ta": true
+  },
+  {
+    "author": "Bianca Guerrero",
+    "authorSite": null,
+    "projectName": "ELEMENTALISTS",
+    "rom": "ELEMENTALISTS.gba",
+    "genres": ["rpg"],
+    "year": 2018,
+    "semester": "Fall",
+    "ta": true
+  },
+  {
+    "author": "Mitchell Philip",
+    "authorSite": "https://github.com/MGPAlpha/DownwellGBA",
+    "projectName": "DownwellGBA",
+    "rom": "DownwellGBA.gba",
+    "genres": ["platformer", "roguelike", "demake", "shooter"],
+    "year": 2022,
+    "semester": "Spring",
+    "ta": false
+  }
+]
