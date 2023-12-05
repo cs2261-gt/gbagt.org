@@ -78,5 +78,25 @@
     "year": 2019,
     "semester": "Fall",
     "ta": true
+  },
+  {
+    "author": "Travis Bittel",
+    "authorSite": "https://travisbittel.com/",
+    "projectName": "Spellslinger",
+    "rom": "Spellslinger",
+    "genres": ["rpg"],
+    "year": 2021,
+    "semester": "Spring",
+    "ta": true
+  },
+  {
+    "author": "Julia Reuter e Carvalho",
+    "authorSite": "https://github.com/juliareuterr",
+    "projectName": "kitty thief",
+    "rom": "kittyThief",
+    "genres": ["cat"],
+    "year": 2020,
+    "semester": "Fall",
+    "ta": true
   }
 ]
