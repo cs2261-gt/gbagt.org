@@ -108,5 +108,15 @@
     "year": 2020,
     "semester": "Fall",
     "ta": true
+  },
+  {
+    "author": "Andrew Dowdy",
+    "authorSite": null,
+    "projectName": "Escape to Titan",
+    "rom": "EscapeToTitan",
+    "genres": ["space", "shooter"],
+    "year": 2021,
+    "semester": "Fall",
+    "ta": true
   }
 ]
