@@ -41,7 +41,7 @@
   },
   {
     "author": "Luke Walter",
-    "authorSite": null,
+    "authorSite": "https://github.com/LukeWalter/zenith-gba",
     "projectName": "Zenith",
     "rom": "Zenith",
     "genres": ["puzzle"],
