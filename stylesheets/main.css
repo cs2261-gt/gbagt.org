@@ -101,14 +101,14 @@ body,
 
 /* unvisited link */
 a:link {
-  text-decoration: "none";
-  box-shadow: "none";
+  text-decoration: none;
+  box-shadow: none;
 }
 
 /* visited link */
 a:visited {
-  text-decoration: "none";
-  box-shadow: "none";
+  text-decoration: none;
+  box-shadow: none;
 }
 
 /* mouse over link */
@@ -119,8 +119,8 @@ a:hover {
 
 /* selected link */
 a:active {
-  text-decoration: "none";
-  box-shadow: "none";
+  text-decoration: none;
+  box-shadow: none;
 }
 
 h1, h2, h3 {
@@ -175,4 +175,29 @@ nav.footer a:hover, nav.footer a:active, nav.footer a:focus {
   color: #595796;
   background-color: #fff;
   border-color: #595796;
+}
+
+.game-card {
+  display: inline-block;
+  width: 280px;
+  min-height: 320px;
+  vertical-align: top;
+  text-align: center;
+  padding: 10px;
+}
+
+.game-card a {
+  color: #595796;
+}
+
+.game-card a:hover, .game-card a:active, .game-card a:focus {
+  background-color: #fff;
+}
+
+.game-card ul {
+  padding:0;
+}
+
+.game-card li {
+  list-style-type: none;
 }

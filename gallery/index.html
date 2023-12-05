@@ -30,14 +30,14 @@
         json => {
           window.MANIFEST = json;
 
-          for (const [key, value] of Object.entries(MANIFEST)) {
+          for (value of MANIFEST) {
             let game_card = document.createElement("div");
             game_card.setAttribute("class", "game-card");
             game_card.innerHTML =
-              '<a href="/gallery/player.html?rom=' + key + '">' +
-                '<img src="/roms/' + key + '.png" width="240" height="160" />' +
+              '<a href="/gallery/player.html?project=' + value.projectName + '">' +
+                '<img src="/roms/' + value.rom + '.png" width="240" height="160" />' +
               '</a>' +
-              '<h3><a href="/gallery/player.html?rom=' + key + '"></a></h3>' +
+              '<h3><a href="/gallery/player.html?project=' + value.projectName + '">' + value.projectName + '</a></h3>' +
               '<ul>' +
                 '<li><label>Author: </label> ' +
                   (value.authorSite ?

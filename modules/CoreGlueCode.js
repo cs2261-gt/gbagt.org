@@ -54,10 +54,10 @@ window.onload = function() {
             json => {
                 window.MANIFEST = json;
                 let fallback = {projectName: "lab0", rom: "lab0.gba"};
-                window.game = MANIFEST[new URLSearchParams(location.search).get("rom")] || fallback;
+                window.game = MANIFEST.find(m => m.projectName == new URLSearchParams(location.search).get("project")) || fallback;
 
                 let img = document.querySelector("img.preview");
-                img.setAttribute("src", "/roms/" + window.game["projectName"] + ".png");
+                img.setAttribute("src", "/roms/" + window.game["rom"] + ".png");
 
                 //Populate settings:
                 registerDefaultSettings();
@@ -97,7 +97,7 @@ function letErRip(){
 }
 
 function downloadROM() {
-    downloadFile("roms/" + game["rom"], registerROM);
+    downloadFile("roms/" + game["rom"] + '.gba', registerROM);
 }
 
 function registerROM() {
