@@ -98,5 +98,15 @@
     "year": 2020,
     "semester": "Fall",
     "ta": true
+  },
+  {
+    "author": "Evan Roberts",
+    "authorSite": "https://screv69.itch.io/sassafras-the-game",
+    "projectName": "Sassafras",
+    "rom": "Sassafras (platformer)",
+    "genres": ["platformer"],
+    "year": 2020,
+    "semester": "Fall",
+    "ta": true
   }
 ]
