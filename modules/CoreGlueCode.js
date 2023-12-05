@@ -53,7 +53,7 @@ window.onload = function() {
         .then(
             json => {
                 window.MANIFEST = json;
-                let fallback = {projectName: "lab0", rom: "lab0.gba"};
+                let fallback = {projectName: "lab0", rom: "lab0"};
                 window.game = MANIFEST.find(m => m.projectName == new URLSearchParams(location.search).get("project")) || fallback;
 
                 let img = document.querySelector("img.preview");

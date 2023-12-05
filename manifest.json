@@ -48,5 +48,15 @@
     "year": 2022,
     "semester": "Spring",
     "ta": true
+  },
+  {
+    "author": "Mackenzie Thies",
+    "authorSite": null,
+    "projectName": "BugginOut",
+    "rom": "BugginOut",
+    "genres": ["puzzle"],
+    "year": 2023,
+    "semester": "Spring",
+    "ta": true
   }
 ]
