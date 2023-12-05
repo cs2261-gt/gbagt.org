@@ -22,7 +22,41 @@
   <h1>CS 2261 @ Georgia Tech</h1>
   <hr>
   <p>Welcome to <span style="color: #595796">GBA GT</span>.</p>
-  <iframe src="/player.html" style="width:480px;height:320px;margin:0 auto;display:block;"></iframe>
+
+  <div id="gallery"></div>
+  <script>
+    fetch('/manifest.json').then(response =>
+      response.json().then(
+        json => {
+          window.MANIFEST = json;
+
+          for (const [key, value] of Object.entries(MANIFEST)) {
+            let game_card = document.createElement("div");
+            game_card.setAttribute("class", "game-card");
+            game_card.innerHTML =
+              '<a href="/gallery/player.html?rom=' + key + '">' +
+                '<img src="/roms/' + key + '.png" width="240" height="160" />' +
+              '</a>' +
+              '<h3><a href="/gallery/player.html?rom=' + key + '"></a></h3>' +
+              '<ul>' +
+                '<li><label>Author: </label> ' +
+                  (value.authorSite ?
+                    '<a href="' + value.authorSite + '">' + value.author + '</a>':
+                    value.author) +
+                  (value.ta ? ' <span class="ta">(TA)</span>' : '') + '</li>' +
+                '<li><label>Semester: </label> ' + value.semester + ' ' + value.year + '</li>' +
+                '<li><label>Genres: </label> ' +
+                  value.genres.map( genre =>
+                    '<a href="#' + genre +'">#' + genre + '</a>')
+                  .join(' ') +
+                '</li>' +
+              '</ul>'
+
+            document.querySelector("#gallery").appendChild(game_card);
+          }
+
+        }));
+  </script>
 </body>
 
 </html>

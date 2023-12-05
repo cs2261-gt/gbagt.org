@@ -1,15 +1,16 @@
-[
-  {
-    "author": "Marie Zimmerman",
-    "authorSite": "https://github.com/mariezimmy",
-    "projectName": "Purzzle",
-    "rom": "Purzzle.gba",
-    "genres": ["puzzle"],
-    "year": 2019,
-    "semester": "Spring",
-    "ta": true
-  },
-  {
+{
+  "Purzzle":
+    {
+      "author": "Marie Zimmerman",
+      "authorSite": "https://github.com/mariezimmy",
+      "projectName": "Purzzle",
+      "rom": "Purzzle.gba",
+      "genres": ["puzzle"],
+      "year": 2019,
+      "semester": "Spring",
+      "ta": true
+    },
+  "ELEMENTALISTS": {
     "author": "Bianca Guerrero",
     "authorSite": null,
     "projectName": "ELEMENTALISTS",
@@ -19,7 +20,7 @@
     "semester": "Fall",
     "ta": true
   },
-  {
+  "DownwellGBA": {
     "author": "Mitchell Philip",
     "authorSite": "https://github.com/MGPAlpha/DownwellGBA",
     "projectName": "DownwellGBA",
@@ -29,4 +30,4 @@
     "semester": "Spring",
     "ta": false
   }
-]
+}
