@@ -58,5 +58,25 @@
     "year": 2023,
     "semester": "Spring",
     "ta": true
+  },
+  {
+    "author": "Nathanial Davenport",
+    "authorSite": null,
+    "projectName": "Traveller",
+    "rom": "Traveller",
+    "genres": ["rpg"],
+    "year": 2020,
+    "semester": "Fall",
+    "ta": true
+  },
+  {
+    "author": "Jodianne Bartolo",
+    "authorSite": null,
+    "projectName": "Lactose Foe",
+    "rom": "LactoseFoe",
+    "genres": ["zombies"],
+    "year": 2019,
+    "semester": "Fall",
+    "ta": true
   }
 ]
