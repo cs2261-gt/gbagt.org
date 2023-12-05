@@ -46,25 +46,39 @@ var IodineGUI = {
         ]
     }
 };
+
 window.onload = function() {
-    //Populate settings:
-    registerDefaultSettings();
-    //Initialize Iodine:
-    registerIodineHandler();
-    //Initialize the timer:
-    calculateTiming();
-    //Initialize the graphics:
-    registerBlitterHandler();
-    //Initialize the audio:
-    registerAudioHandler();
-    //Register the save handler callbacks:
-    registerSaveHandlers();
-    //Register the GUI controls.
-    registerGUIEvents();
-    //Register GUI settings.
-    registerGUISettings();
-    //Download the BIOS:
-    downloadBIOS();
+    fetch('/manifest.json')
+        .then(response => response.json()
+        .then(
+            json => {
+                window.MANIFEST = json;
+                let fallback = {projectName: "lab0", rom: "lab0.gba"};
+                window.game = MANIFEST[new URLSearchParams(location.search).get("rom")] || fallback;
+
+                let img = document.querySelector("img.preview");
+                img.setAttribute("src", "/roms/" + window.game["projectName"] + ".png");
+
+                //Populate settings:
+                registerDefaultSettings();
+                //Initialize Iodine:
+                registerIodineHandler();
+                //Initialize the timer:
+                calculateTiming();
+                //Initialize the graphics:
+                registerBlitterHandler();
+                //Initialize the audio:
+                registerAudioHandler();
+                //Register the save handler callbacks:
+                registerSaveHandlers();
+                //Register the GUI controls.
+                registerGUIEvents();
+                //Register GUI settings.
+                registerGUISettings();
+                //Download the BIOS:
+                downloadBIOS();
+            }
+        ));
 }
 
 function downloadBIOS() {
@@ -83,7 +97,7 @@ function letErRip(){
 }
 
 function downloadROM() {
-    downloadFile("roms/Purzzle.gba", registerROM);
+    downloadFile("roms/" + game["rom"], registerROM);
 }
 
 function registerROM() {
