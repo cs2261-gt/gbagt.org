@@ -118,5 +118,15 @@
     "year": 2021,
     "semester": "Fall",
     "ta": true
+  },
+  {
+    "author": "Aden Robertson",
+    "authorSite": null,
+    "projectName": "Pooh's Honey Hunt",
+    "rom": "PoohsHoneyHunt",
+    "genres": ["rpg"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
