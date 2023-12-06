@@ -128,5 +128,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "David Friedman",
+    "authorSite": null,
+    "projectName": "Corner Face-off!!",
+    "rom": "CornerFaceoff!!",
+    "genres": ["boxing"],
+    "year": 2018,
+    "semester": "Spring",
+    "ta": true
   }
 ]
