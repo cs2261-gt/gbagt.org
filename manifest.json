@@ -61,7 +61,7 @@
   },
   {
     "author": "Nathanial Davenport",
-    "authorSite": null,
+    "authorSite": "https://github.com/nathandaven/traveller-gba",
     "projectName": "Traveller",
     "rom": "Traveller",
     "genres": ["rpg"],
