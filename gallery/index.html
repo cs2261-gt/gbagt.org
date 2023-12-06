@@ -28,10 +28,7 @@
     function render(){
       let hash = window.location.hash;
       let targetDiv = document.querySelector("#gallery");
-
       targetDiv.innerHTML = '';
-
-      console.log("hash", hash);
 
       let games = hash.length > 1 ? MANIFEST.filter(v => v.genres.indexOf(hash.substr(1)) > -1) : MANIFEST;
 
