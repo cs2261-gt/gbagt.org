@@ -138,5 +138,15 @@
     "year": 2018,
     "semester": "Spring",
     "ta": true
+  },
+  {
+    "author": "Luke Choi",
+    "authorSite": null,
+    "projectName": "DIAGON",
+    "rom": "DIAGON",
+    "genres": ["bomberman", "geometry"],
+    "year": 2022,
+    "semester": "Spring",
+    "ta": false
   }
 ]

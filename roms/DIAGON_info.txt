@@ -1,0 +1,33 @@
+Welcome to DIAGON!
+
+For animated sprites, the bullets and enemies that shoot bullets have 3+ frames of looping animation (enemies.c -> updateRanged___()/updateBullets()/updateDummy())
+For parallax backgrounds, the splash screen uses 4 backgrounds: 2 static, 2 moving at different speeds (main.c -> splash()/wincutscene())
+For tilemap modification, the cracks turning into holes and cutscene at the end of level 7 (game.c -> openDoor(), look at startXYcutscene() at your own risk)
+For palette modification, the player's eyes change color when invuln, and the [START] changes color in the win/lose screen (player.c -> updatePlayer(), main.c -> win()/lose())
+Digital sound is used for looping background music and non-looping explosion/falling sound effects which layer on top of music (play.c, sound.c)
+malloc is used for collision map modification
+Fixed point is used for precise movement
+Transparency is used in sprites for shadows and glow effects
+
+Instructions:
+D-pad to change move: 
+    Moving ramps up your velocity in that direction, up to a point
+    You will lose speed to friction
+A to lay an explosive (max of 3)
+B to detonate all explosives
+UP and DOWN and A to navigate in splash and pause menus
+START to go to splash from win/lose
+L and R at the same time to activate the cheat:
+    Cheat freezes all enemies for 3 seconds, unable to attack or move
+
+You have 3 lives, and getting hit by an enemy or bullet removes a life and gives short invuln
+Every other level, you may regain a life (up to max 3)
+You are invulnerable when being boosted by your explosions (dependent on speed)
+If you ram into an enemy while invulnerable (red eyes as indicator), they die
+You can also place an explosive very close to an enemy and detonate to kill it
+Killing enemies only makes it easier to complete levels
+To complete a level, explode the cracked part of the floor and go through the hole
+
+You can place multiple explosives and position yourself near them to get a multi-vectored boost
+You can go very very fast with multiple explosions
+Your distance from the explosion dictates how much speed you get
