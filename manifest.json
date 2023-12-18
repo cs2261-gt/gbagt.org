@@ -178,5 +178,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Zade Feng",
+    "authorSite": null,
+    "projectName": "Ink Link",
+    "rom": "InkLink",
+    "genres": ["puzzle"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
