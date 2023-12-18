@@ -158,5 +158,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Jace Walden",
+    "authorSite": null,
+    "projectName": "The Debugger 2",
+    "rom": "TheDebugger2",
+    "genres": ["shooter", "survival"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
