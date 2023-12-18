@@ -148,5 +148,15 @@
     "year": 2022,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "John Rarer",
+    "authorSite": null,
+    "projectName": "A Hole!",
+    "rom": "AHole",
+    "genres": ["golf", "sports"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
