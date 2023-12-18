@@ -168,5 +168,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Manuel Alexander Morin Jr.",
+    "authorSite": null,
+    "projectName": "The Penguin is Pissed",
+    "rom": "ThePenguinIsPissed",
+    "genres": ["platformer", "combat", "angryBirds"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
