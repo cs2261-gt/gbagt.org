@@ -188,5 +188,25 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Rachel Young",
+    "authorSite": null,
+    "projectName": "Prisma Quest",
+    "rom": "PrismaQuest",
+    "genres": ["platformer"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
+    "author": "Esther Moon",
+    "authorSite": null,
+    "projectName": "Shoot for the Moon",
+    "rom": "ShootForTheMoon",
+    "genres": ["platformer"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
