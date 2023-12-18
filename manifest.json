@@ -124,7 +124,7 @@
     "authorSite": null,
     "projectName": "Pooh's Honey Hunt",
     "rom": "PoohsHoneyHunt",
-    "genres": ["rpg"],
+    "genres": ["rpg", "horror"],
     "year": 2023,
     "semester": "Fall",
     "ta": false
@@ -134,7 +134,7 @@
     "authorSite": null,
     "projectName": "Corner Face-off!!",
     "rom": "CornerFaceoff!!",
-    "genres": ["boxing"],
+    "genres": ["boxing", "sports"],
     "year": 2018,
     "semester": "Spring",
     "ta": true
