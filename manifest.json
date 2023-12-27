@@ -208,5 +208,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Amber Ephraim",
+    "authorSite": null,
+    "projectName": "Cyber Citadel",
+    "rom": "CyberCitadel",
+    "genres": ["platformer"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
