@@ -218,5 +218,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Jade Spooner",
+    "authorSite": null,
+    "projectName": "Anarchaeologist",
+    "rom": "Anarchaeologist",
+    "genres": ["puzzle", "geometry"],
+    "year": 2022,
+    "semester": "Spring",
+    "ta": false
   }
 ]
