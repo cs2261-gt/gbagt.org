@@ -228,5 +228,15 @@
     "year": 2022,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "Matt Rose",
+    "authorSite": null,
+    "projectName": "Curse Of The Vanishing Warship",
+    "rom": "CurseOfTheVanishingWarship",
+    "genres": ["rpg", "puzzle"],
+    "year": 2024,
+    "semester": "Spring",
+    "ta": false
   }
 ]
