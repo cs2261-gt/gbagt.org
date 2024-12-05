@@ -237,6 +237,6 @@
     "genres": ["rpg", "puzzle"],
     "year": 2024,
     "semester": "Spring",
-    "ta": false
+    "ta": true
   }
 ]
