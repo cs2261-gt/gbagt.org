@@ -207,7 +207,7 @@
     "genres": ["platformer"],
     "year": 2023,
     "semester": "Fall",
-    "ta": false
+    "ta": true
   },
   {
     "author": "Amber Ephraim",
