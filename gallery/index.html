@@ -41,7 +41,7 @@
         }
       }
 
-      for (value of games) {
+      for (value of games.sort((a, b) => a.year - b.year)) {
         let game_card = document.createElement("div");
         game_card.setAttribute("class", "game-card");
         game_card.innerHTML =
