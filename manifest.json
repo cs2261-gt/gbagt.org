@@ -238,5 +238,25 @@
     "year": 2024,
     "semester": "Spring",
     "ta": true
+  },
+  {
+    "author": "Kaleb Bates",
+    "authorSite": null,
+    "projectName": "Digital Remnants",
+    "rom": "DigitalRemnants",
+    "genres": ["puzzle", "mystery"],
+    "year": 2024,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
+    "author": "Aaron Wang",
+    "authorSite": null,
+    "projectName": "Quacky World",
+    "rom": "QuackyWorld",
+    "genres": ["platformer", "duck-simulator"],
+    "year": 2024,
+    "semester": "Fall",
+    "ta": false
   }
 ]
