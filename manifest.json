@@ -220,6 +220,16 @@
     "ta": false
   },
   {
+    "author": "Jared Nation",
+    "authorSite": null,
+    "projectName": "Rise Of The Emperors",
+    "rom": "RiseOfTheEmperors",
+    "genres": ["combat"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": true
+  },
+  {
     "author": "Jade Spooner",
     "authorSite": "http://jadespooner.xyz/",
     "projectName": "Anarchaeologist",
