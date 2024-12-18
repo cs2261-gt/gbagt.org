@@ -210,6 +210,16 @@
     "ta": true
   },
   {
+    "author": "Jocelyn Le",
+    "authorSite": "http://jocelynle.com",
+    "projectName": "Michiru's New Melody",
+    "rom": "MichirusNewMelody",
+    "genres": ["visual-novel", "rpg"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": true
+  },
+  {
     "author": "Amber Ephraim",
     "authorSite": null,
     "projectName": "Cyber Citadel",
