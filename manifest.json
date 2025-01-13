@@ -288,5 +288,15 @@
     "year": 2023,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Steven Yang",
+    "authorSite": null,
+    "projectName": "Anubis",
+    "rom": "Anubis",
+    "genres": ["puzzle"],
+    "year": 2023,
+    "semester": "Spring",
+    "ta": false
   }
 ]
