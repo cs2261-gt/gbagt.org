@@ -278,5 +278,15 @@
     "year": 2024,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Emmaly Nguyen",
+    "authorSite": null,
+    "projectName": "Thin Ice",
+    "rom": "ThinIce",
+    "genres": ["puzzle"],
+    "year": 2023,
+    "semester": "Fall",
+    "ta": false
   }
 ]
