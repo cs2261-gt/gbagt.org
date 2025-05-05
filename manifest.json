@@ -298,5 +298,25 @@
     "year": 2023,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "Melanie Chen",
+    "authorSite": null,
+    "projectName": "The Game Ascent",
+    "rom": "TheGameAscent",
+    "genres": ["adventure", "platformer"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  },
+  {
+    "author": "Sophie Heim",
+    "authorSite": null,
+    "projectName": "Satori Mountain",
+    "rom": "SatoriMountain",
+    "genres": ["adventure"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
   }
 ]
