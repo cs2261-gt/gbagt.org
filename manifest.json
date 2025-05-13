@@ -318,5 +318,25 @@
     "year": 2025,
     "semester": "Spring",
     "ta": false
-  }
+  },
+  {
+    "author": "Edwin Jiang",
+    "authorSite": null,
+    "projectName": "Swaggy Cat Slap",
+    "rom": "SwaggyCatSlap",
+    "genres": ["rhythm"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  },
+  {
+    "author": "Siddarth Krishnan",
+    "authorSite": null,
+    "projectName": "Rift Duo",
+    "rom": "RiftDuo",
+    "genres": ["puzzle", "platformer", "teamwork"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  }  
 ]
