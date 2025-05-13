@@ -338,5 +338,35 @@
     "year": 2025,
     "semester": "Spring",
     "ta": false
-  }  
+  },
+  {
+    "author": "Leon Li",
+    "authorSite": null,
+    "projectName": "Pixel Pop: The Rhythm Game",
+    "rom": "PixelPop",
+    "genres": ["rhythm", "platformer"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  },
+  {
+    "author": "Norah Li",
+    "authorSite": null,
+    "projectName": "STARCROSSED",
+    "rom": "Starcrossed",
+    "genres": ["platformer", "adventure"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  },
+  {
+    "author": "Isaiah Philip",
+    "authorSite": null,
+    "projectName": "CH1MP",
+    "rom": "CH1MP",
+    "genres": ["platformer", "kong"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
+  }
 ]
