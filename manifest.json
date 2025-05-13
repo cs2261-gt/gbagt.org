@@ -368,5 +368,15 @@
     "year": 2025,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "Evan Stagl",
+    "authorSite": null,
+    "projectName": "Graviton",
+    "rom": "Graviton",
+    "genres": ["puzzle"],
+    "year": 2025,
+    "semester": "Spring",
+    "ta": false
   }
 ]
