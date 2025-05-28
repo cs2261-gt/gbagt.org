@@ -378,5 +378,15 @@
     "year": 2025,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "Kevin Min",
+    "authorSite": "https://github.com/Pyxidata",
+    "projectName": "B-Tring",
+    "rom": "B-Tring",
+    "genres": ["rhythm"],
+    "year": 2021,
+    "semester": "Spring",
+    "ta": false
   }
 ]
