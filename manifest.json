@@ -388,5 +388,25 @@
     "year": 2021,
     "semester": "Spring",
     "ta": false
+  },
+  {
+    "author": "Roger Swift",
+    "authorSite": "https://www.youtube.com/@swiff_r",
+    "projectName": "Flame the Cat",
+    "rom": "FlameTheCat",
+    "genres": ["platformer", "adventure"],
+    "year": 2025,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
+    "author": "Brian Zheng",
+    "authorSite": "http://www.linkedin.com/in/bzheng1031",
+    "projectName": "Touhou: TheFinalProject",
+    "rom": "TouhouTheFinalProject",
+    "genres": ["bullet-hell", "shooter"],
+    "year": 2025,
+    "semester": "Fall",
+    "ta": false
   }
 ]
