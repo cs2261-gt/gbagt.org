@@ -397,6 +397,7 @@
     "genres": ["platformer", "adventure"],
     "year": 2025,
     "semester": "Fall",
+    "requiresMGBA": true,
     "ta": false
   },
   {
