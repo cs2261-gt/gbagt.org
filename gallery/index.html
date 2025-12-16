@@ -49,7 +49,7 @@
           '<a href="/gallery/player.html?project=' + value.projectName + '">' +
             '<img src="/roms/' + value.rom + '.png" width="240" height="160" />' +
           '</a>' +
-          '<h3><a href="/gallery/player.html?project=' + value.projectName + '">' + value.projectName + '</a></h3>' +
+          '<h3><a href="/gallery/player.html?project=' + encodeURIComponent(value.projectName) + '">' + value.projectName + '</a></h3>' +
           '<ul>' +
             '<li><label>Author: </label> ' +
               (value.authorSite ?
