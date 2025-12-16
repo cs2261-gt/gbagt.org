@@ -390,6 +390,36 @@
     "ta": false
   },
   {
+    "author": "Olivia Banich",
+    "authorSite": "https://github.com/obanich",
+    "projectName": "Planet Hopper",
+    "rom": "PlanetHopper",
+    "genres": ["platformer", "gravitySimulator"],
+    "year": 2025,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
+    "author": "Tatiana Cantu-Gonzalez",
+    "authorSite": "https://github.com/Chivs1/TrenchCS2261",
+    "projectName": "Trench",
+    "rom": "Trench",
+    "genres": ["platformer", "adventure"],
+    "year": 2025,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
+    "author": "Joshua Dietzenbach",
+    "authorSite": "https://www.linkedin.com/in/joshua-dietzenbach-69b396328/",
+    "projectName": "Emperor's Tundra",
+    "rom": "EmperorsTundra",
+    "genres": ["adventure", "angryBirds"],
+    "year": 2025,
+    "semester": "Fall",
+    "ta": false
+  },
+  {
     "author": "Roger Swift",
     "authorSite": "https://www.youtube.com/@swiff_r",
     "projectName": "Flame the Cat",
@@ -398,6 +428,16 @@
     "year": 2025,
     "semester": "Fall",
     "requiresMGBA": true,
+    "ta": false
+  },
+  {
+    "author": "Noah Sung",
+    "authorSite": "https://www.youtube.com/@swiff_r",
+    "projectName": "Punch + Kick",
+    "rom": "Punch+Kick",
+    "genres": ["combat"],
+    "year": 2025,
+    "semester": "Fall",
     "ta": false
   },
   {
