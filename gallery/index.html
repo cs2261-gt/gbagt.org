@@ -42,14 +42,15 @@
       }
 
       for (value of games.sort((a, b) => a.year - b.year)) {
-        if (value.requiresMGBA) continue;  // skip these for now
+        let playerURL = (value.requiresMGBA ? '/gallery/mgba-player.html?project=' : '/gallery/player.html?project=') +
+          encodeURIComponent(value.projectName);
         let game_card = document.createElement("div");
         game_card.setAttribute("class", "game-card");
         game_card.innerHTML =
-          '<a href="/gallery/player.html?project=' + value.projectName + '">' +
+          '<a href="' + playerURL + '">' +
             '<img src="/roms/' + value.rom + '.png" width="240" height="160" />' +
           '</a>' +
-          '<h3><a href="/gallery/player.html?project=' + encodeURIComponent(value.projectName) + '">' + value.projectName + '</a></h3>' +
+          '<h3><a href="' + playerURL + '">' + value.projectName + '</a></h3>' +
           '<ul>' +
             '<li><label>Author: </label> ' +
               (value.authorSite ?

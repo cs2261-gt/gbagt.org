@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="/coi-serviceworker.js"></script>
+  <link rel="stylesheet" href="/stylesheets/player.css">
+  <link rel="stylesheet" href="/stylesheets/player-override.css">
+
+  <style>
+    #emulator_target, .preview {
+      image-rendering: crisp-edges;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: auto 240 / 160;
+      object-fit: contain;
+      background: inherit;
+    }
+    #menu, .touch-controls {
+      display: none;
+    }
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GBA @ GT</title>
+</head>
+
+<body>
+  <img class="preview" src="/img/gt.png" />
+  <div id="container" class="hidden">
+    <div id="menu" class="paused">
+      <ul class="menu" id="menu_top">
+        <li style="display:none;">File
+          <ul>
+            <li><span>BIOS: </span> <input type="file" id="bios_load" class="files"></li>
+            <li><span>Game: </span> <input type="file" id="rom_load" class="files"></li>
+          </ul>
+        </li>
+        <li id="play" class="show">Play</li>
+        <li id="pause" class="hide">Pause</li>
+        <li id="restart">Restart</li>
+        <li>Settings
+          <ul>
+            <li style="display:none;"><input type="checkbox" id="skip_boot"> Skip Boot Intro</li>
+            <li><input type="checkbox" id="toggleSmoothScaling" checked="checked"> Smooth Scaling</li>
+            <li><input type="checkbox" id="toggleDynamicSpeed"> Dynamic Speed</li>
+            <li><input type="checkbox" id="offthread-cpu" checked="checked"> CPU off-thread</li>
+            <li><input type="checkbox" id="offthread-gpu" checked="checked"> GPU off-thread</li>
+            <li><input type="checkbox" id="sound"> Sound</li>
+            <li>GBA Bindings
+              <ul>
+                <li id="key_a"><span>A</span></li>
+                <li id="key_b"><span>B</span></li>
+                <li id="key_l"><span>L</span></li>
+                <li id="key_r"><span>R</span></li>
+                <li id="key_start"><span>Start</span></li>
+                <li id="key_select"><span>Select</span></li>
+                <li id="key_up"><span>↑</span></li>
+                <li id="key_down"><span>↓</span></li>
+                <li id="key_left"><span>←</span></li>
+                <li id="key_right"><span>→</span></li>
+              </ul>
+            </li>
+            <li>Emulator Bindings
+              <ul>
+                <li id="key_volumeup"><span>Volume Up</span>
+                </li>
+                <li id="key_volumedown"><span>Volume Down</span>
+                </li>
+                <li id="key_speedup"><span>Speed Up</span></li>
+                <li id="key_slowdown"><span>Slow Down</span></li>
+                <li id="key_speedreset"><span>Speed Reset</span></li>
+                <li id="key_fullscreen"><span>Fullscreen</span></li>
+                <li id="key_playpause"><span>Play/Pause</span></li>
+                <li id="key_restart"><span>Restart</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li style="display:none;">
+          Volume
+          <ul>
+            <li>
+              <input type="range" id="volume">
+            </li>
+          </ul>
+        </li>
+        <li id="saves_menu" style="display:none;">
+          Saves
+          <ul id="saves_menu_container">
+            <li><span>Import:</span><input type="file" id="import" class="files"></li>
+            <li id="existing_saves">
+              <span>Existing Saves</span>
+              <ul id="existing_saves_list">
+
+              </ul>
+            </li>
+            <li><a href="./" id="export" target="_new">Export All Saves</a></li>
+          </ul>
+        </li>
+        <li id="fullscreen">Fullscreen</li>
+        <li>
+          <span id="speed">Speed</span>
+          <ul style="display:none;">
+            <li>
+              <input type="range" id="speedset">
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="main">
+      <canvas class="canvas" id="emulator_target" width="240" height="160"></canvas>
+    </div>
+    <div class="touch-controls">
+      <div class="touch-dpad">
+        <button id="touch-up">↑</button><br>
+        <button id="touch-left">←</button>
+        <button id="touch-right">→</button><br>
+        <button id="touch-down">↓</button>
+      </div>
+      <div class="touch-buttons">
+        <button id="touch-select">SELECT</button>
+        <button id="touch-start">START</button>
+      </div>
+      <div class="touch-buttons">
+        <button id="touch-a">A</button>
+        <button id="touch-b">B</button><br>
+        <button id="touch-l">L</button>
+        <button id="touch-r">R</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Required Scripts -->
+
+  <!-- mGBA Emu -->
+  <!-- <script type="module" src="/mgba-wasm/dist/mgba.js"></script> -->
+
+  <!-- user scripts -->
+  <!-- <script src="/modules/AudioGlueCode.js"></script>
+    <script src="/modules/base64.js"></script>
+    <script src="/modules/GfxGlueCode.js"></script>
+    <script src="/modules/GUIGlueCode.js"></script>
+    <script src="/modules/JoyPadGlueCode.js"></script>
+    <script src="/modules/ROMLoadGlueCode.js"></script>
+    <script src="/modules/SavesGlueCode.js"></script>
+    <script src="/modules/WorkerGfxGlueCode.js"></script>
+    <script src="/modules/WorkerGlueCode.js"></script>
+    <script src="/modules/XAudioJS/swfobject.js"></script>
+    <script src="/modules/XAudioJS/resampler.js"></script>
+    <script src="/modules/XAudioJS/XAudioServer.js"></script>
+    <script src="/modules/CoreGlueCode.js"></script> -->
+  <script src="/modules/GUIGlueCode.js"></script>
+  <script type="module">
+    import mGBA from '/mgba-wasm/dist/mgba.js';
+
+    async function getFileFromUrl(url, name, defaultType = 'application/octet-stream') {
+      const response = await fetch(url);
+      const data = await response.blob();
+      return new File([data], name, {
+        type: data.type || defaultType,
+      });
+    }
+
+    let module = {
+      canvas: (function () {
+        return document.getElementById('emulator_target');
+      })()
+    };
+
+    window.onload = () => {
+      mGBA(module).then(function (mGBA) {
+        let mGBAVersion = mGBA.version.projectName + ' ' + mGBA.version.projectVersion;
+        console.log(mGBAVersion);
+        mGBA.setCoreSettings({autoSaveStateEnable: false, restoreAutoSaveStateOnLoad: false});
+        mGBA.FSInit();
+        window.mGBA = mGBA;
+
+        function letErRip() {
+          document.querySelector("#container").removeAttribute("class");
+          document.getElementById("play").click();
+          document.querySelector("img.preview").remove();
+          mGBA.loadGame(mGBA.filePaths().gamePath + '/' + window.game["rom"] + '.gba')
+        }
+
+        fetch('/manifest.json')
+          .then(response => response.json()
+            .then(json => {
+              window.MANIFEST = json;
+              let fallback = { projectName: "lab0", rom: "lab0" };
+              window.game = MANIFEST.find(m => m.projectName == new URLSearchParams(location.search).get("project")) || fallback;
+
+              let img = document.querySelector("img.preview");
+              img.setAttribute("src", "/roms/" + window.game["rom"] + ".png");
+              getFileFromUrl(
+                '/roms/' + window.game["rom"] + '.gba',
+                window.game["rom"] + '.gba'
+              ).then(file => {
+                console.log(file);
+                mGBA.uploadRom(file, () => { addEvent("click", document.querySelector("img.preview"), letErRip); });
+              });
+            }));
+      });
+    }
+  </script>
+</body>
+
+</html>
