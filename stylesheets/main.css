@@ -99,28 +99,18 @@ body,
   background: #555;
 } */
 
-/* unvisited link */
-a:link {
+a:link, a:visited {
   text-decoration: none;
   box-shadow: none;
-}
-
-/* visited link */
-a:visited {
-  text-decoration: none;
-  box-shadow: none;
+  color: #595796;
 }
 
 /* mouse over link */
-a:hover {
+a:hover, a:active, a:focus {
   text-decoration: "none";
   box-shadow: "none";
-}
-
-/* selected link */
-a:active {
-  text-decoration: none;
-  box-shadow: none;
+  color: #595796;
+  background-color: #fff;
 }
 
 h1, h2, h3 {
@@ -144,14 +134,14 @@ header li {
   display: inline-block;
 }
 
-header a {
+header a, header a:visited {
   color: #222;
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
 }
 
-header a:hover {
+header a:hover, header a:active, header a:focus {
   color: #595796;
 }
 
@@ -184,14 +174,6 @@ nav.footer a:hover, nav.footer a:active, nav.footer a:focus {
   vertical-align: top;
   text-align: center;
   padding: 10px;
-}
-
-.game-card a {
-  color: #595796;
-}
-
-.game-card a:hover, .game-card a:active, .game-card a:focus {
-  background-color: #fff;
 }
 
 .game-card ul {
