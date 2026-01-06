@@ -39,6 +39,10 @@
       display: none;
       visibility: hidden;
     }
+
+    #container:hover .menu {
+      opacity: 0.9;
+    }
   </style>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +53,7 @@
   <div class="instructions">Click to play...</div>
   <img class="preview" src="/img/gt.png" />
   <div id="container" class="hidden">
-    <div id="menu" class="paused">
+    <div id="menu" class="playing">
       <ul class="menu" id="menu_top">
         <li id="play" class="hide">Play</li>
         <li id="pause" class="show">Pause</li>
