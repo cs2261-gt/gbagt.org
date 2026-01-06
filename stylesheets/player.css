@@ -270,3 +270,7 @@ li.hide {
         display: flex;
     }
 }
+
+img {
+    image-rendering: pixelated;
+}

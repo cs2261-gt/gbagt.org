@@ -11,7 +11,7 @@
 function GfxGlueCode(width, height) {
     this.graphicsFound = false;               //Do we have graphics output sink found yet?
     this.gfxCallback = null;                  //Optional callback user-supplied for vsync eventing.
-    this.doSmoothing = true;                  //Texture filter the framebuffer?
+    this.doSmoothing = false;                  //Texture filter the framebuffer?
     this.offscreenWidth = width;              //Width of the screen.
     this.offscreenHeight = height;            //Height of the screen.
     this.offscreenRGBCount = this.offscreenWidth * this.offscreenHeight * 3;

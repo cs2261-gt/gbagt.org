@@ -183,3 +183,7 @@ nav.footer a:hover, nav.footer a:active, nav.footer a:focus {
 .game-card li {
   list-style-type: none;
 }
+
+img {
+  image-rendering: pixelated;
+}
