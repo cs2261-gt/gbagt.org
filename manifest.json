@@ -449,5 +449,16 @@
     "year": 2025,
     "semester": "Fall",
     "ta": false
+  },
+  {
+    "author": "Jordan Smith",
+    "authorSite": null,
+    "projectName": "Sonic Coin Adventure",
+    "rom": "SonicCoinAdventure",
+    "genres": ["platformer", "adventure", "hedgehog"],
+    "year": 2026,
+    "semester": "Spring",
+    "requiresMGBA": true,
+    "ta": false
   }
 ]
