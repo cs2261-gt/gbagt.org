@@ -135,6 +135,7 @@
     "projectName": "Corner Face-off!!",
     "rom": "CornerFaceoff!!",
     "genres": ["boxing", "sports"],
+    "requiresMGBA": true,
     "year": 2018,
     "semester": "Spring",
     "ta": true
@@ -456,6 +457,17 @@
     "projectName": "Sonic Coin Adventure",
     "rom": "SonicCoinAdventure",
     "genres": ["platformer", "adventure", "hedgehog"],
+    "year": 2026,
+    "semester": "Spring",
+    "requiresMGBA": true,
+    "ta": false
+  },
+  {
+    "author": "Jennefer Bennett",
+    "authorSite": "https://www.linkedin.com/in/jennefer-bennett",
+    "projectName": "GBA Hero",
+    "rom": "GBAHero",
+    "genres": ["rhythm", "music", "midi"],
     "year": 2026,
     "semester": "Spring",
     "requiresMGBA": true,
