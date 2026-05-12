@@ -452,7 +452,7 @@
   },
   {
     "author": "Jordan Smith",
-    "authorSite": null,
+    "authorSite": "https://github.com/JawztheKid",
     "projectName": "Sonic Coin Adventure",
     "rom": "SonicCoinAdventure",
     "genres": ["platformer", "adventure", "hedgehog"],
