@@ -483,5 +483,16 @@
     "semester": "Spring",
     "requiresMGBA": true,
     "ta": false
+  },
+  {
+    "author": "Ekaterina Lomakina",
+    "authorSite": "https://www.linkedin.com/in/lomakina-ekaterina",
+    "projectName": "Super Hugging Spree",
+    "rom": "SuperHuggingSpree",
+    "genres": ["cat", "hugs"],
+    "year": 2026,
+    "semester": "Spring",
+    "requiresMGBA": true,
+    "ta": false
   }
 ]
