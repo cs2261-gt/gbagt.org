@@ -42,8 +42,7 @@
       }
 
       for (value of games.sort((a, b) => a.year - b.year)) {
-        let playerURL = (value.requiresMGBA ? '/gallery/mgba-player.html?project=' : '/gallery/player.html?project=') +
-          encodeURIComponent(value.projectName);
+        let playerURL = '/gallery/mgba-player.html?project=' + encodeURIComponent(value.projectName);
         let game_card = document.createElement("div");
         game_card.setAttribute("class", "game-card");
         game_card.innerHTML =
